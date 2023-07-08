@@ -1,23 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import Base from './Components/Base';
+import Create from './Components/Create';
+import NoPage from './Components/Nopage';
+import Profile from './Components/Profile';
+import ProfileEdit from './Components/Profile/ProfileEdit';
+import Update from './Components/Update';
+import Users from './Components/Users';
+import { data } from './db.js';
+import { loginData } from './db.js';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+
 
 function App() {
+
+  const [artist, setArtist] = useState(data);
+
+  let [loginUser, setLoginUser] = useState(loginData);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={<Base artist={artist}
+          setArtist={setArtist} title={"Welcome to Artist-App"} discription={"All artist details can get here"} body={"Please Navigate"} loginUser={loginUser} />} />
+        <Route path="/users" element={<Users artist={artist}
+          setArtist={setArtist} loginUser={loginUser} />} />
+        <Route path="/create-user" element={<Create artist={artist} setArtist={setArtist} loginUser={loginUser} />} />
+        <Route path="/edit-user/:artistId" element={<Update artist={artist} setArtist={setArtist} loginUser={loginUser} />} />
+        <Route path={"/profile/:loginUserId"} element={<Profile loginUser={loginUser} setLoginUser={setLoginUser} />} />
+        <Route path={"/edit-profile/:editProfileId"} element={<ProfileEdit loginUser={loginUser} setLoginUser={setLoginUser} />} />
+        <Route path="*" element={<NoPage />} />
+      </Routes>
     </div>
   );
 }
