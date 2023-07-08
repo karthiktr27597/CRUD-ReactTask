@@ -58,7 +58,7 @@ const Update = ({ artist, setArtist }) => {
 
         <div className="update-create">
              <Paper elevation={0} variant="outlined">
-            <h3>Edit and update the details</h3>
+            <h2>Edit and update the details</h2>
             <div className="artist-form">
                 <TextField id="filled-basic" label="id" variant="outlined" type="number" placeholder="id" value={id} onChange={(e) => setId(e.target.value)} />
                 <TextField id="filled-basic" label="name" variant="outlined" type="aname" placeholder="name" value={name} onChange={(e) => setName(e.target.value)} />

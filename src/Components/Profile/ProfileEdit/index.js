@@ -60,8 +60,8 @@ const ProfileEdit = ({ loginUser, setLoginUser }) => {
     return (
 
         <div className="update-create">
-            <h1>Edit and update your Profile </h1>
             <Paper elevation={0} variant="outlined">
+                <h2>Edit and update your Profile </h2>
                 <div className="artist-form">
                     <TextField id="filled-basic" label="id" variant="outlined" defaultValue="Normal" type="name" value={name} onChange={(e) => setName(e.target.value)} />
                     <TextField id="filled-basic" label="profession" variant="outlined" type="profession" value={profession} onChange={(e) => setProfession(e.target.value)} />
