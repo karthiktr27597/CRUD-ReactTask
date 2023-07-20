@@ -1,3 +1,4 @@
+import axios from 'axios';
 import './App.css';
 import Base from './Components/Base';
 import Create from './Components/Create';
@@ -6,17 +7,31 @@ import Profile from './Components/Profile';
 import ProfileEdit from './Components/Profile/ProfileEdit';
 import Update from './Components/Update';
 import Users from './Components/Users';
-import { data } from './db.js';
-import { loginData } from './db.js';
-import { useState } from 'react';
+// import { data } from './db.js';
+// import { loginData } from './db.js';
+import { useEffect, useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
 
-  const [artist, setArtist] = useState(data);
+  const [artist, setArtist] = useState([]);
 
-  let [loginUser, setLoginUser] = useState(loginData);
+  const [loginUser, setLoginUser] = useState({});
+
+
+  useEffect(() => {
+
+    axios.get("https://crudoperation-backend.onrender.com/all")
+      .then((response) => {
+        setArtist(response.data.artistData)
+        setLoginUser(response.data.loginData)
+        console.log("working good")
+      })
+      .catch((err) => console.log(err))
+  }, [])
+
+  console.log(artist, loginUser);
 
   return (
     <div className="App">

@@ -7,9 +7,9 @@ const Base = ({ title, discription, body, loginUser, children }) => {
 
     return (
         <div className="main-container">
-            <header>
-                <Box sx={{ flexGrow: 1 }}>
-                    <AppBar position="static">
+            <header >
+                <Box sx={{ flexGrow: 2 }}>
+                    <AppBar position="flex"  id="navbar">
                         <Toolbar>
                             <IconButton
                                 size="large"
@@ -31,15 +31,6 @@ const Base = ({ title, discription, body, loginUser, children }) => {
                         </Toolbar>
                     </AppBar>
                 </Box>
-                {/* <nav>
-                    <div>Artist App</div>
-                    <div className="nav-btn-group">
-                        <button onClick={() => navigate("/")}>Dasboard</button>
-                        <button onClick={() => navigate("/users")}>Artist List</button>
-                        <button onClick={() => navigate("/create-user")}>Add Artist</button>
-                        <button onClick={() => navigate(`/profile/${loginUser.id}`)}>Profile</button>
-                    </div>
-                </nav> */}
 
             </header>
             <main>

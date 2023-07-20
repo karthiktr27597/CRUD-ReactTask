@@ -2,83 +2,71 @@
   text-align: center;
 }
 
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 12px;
-}
-
 .main-container {
-  margin: 25px;
+  margin: 2vw;
 }
+
 
 .nav-btn-group {
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1vw;
 }
 
-/* main {
-  border: 1px solid red;
-} */
-
-/* .dashboard {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  gap: 1rem;
-} */
 
 .dashboard .artist-collection {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 20px;
+  gap: 2vw;
   flex-wrap: wrap;
 }
 
 .dashboard .artist-card {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column; */
-  width: auto;
+
+  min-width: 150px;
   height: auto;
-  background-color: #92c6f9;
-  padding: 20px;
-  border-radius: 20px;
+  background-color: #91c5f9;
+  padding: 1vw;
+  border-radius: 2vw;
 }
 
 .card-btn {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  padding: 10px;
+  gap: 1vw;
+  padding: 1wh;
 }
 
 .card-btn>button {
   padding: auto;
-  border-radius: 5px;
-  min-height: 30px;
+  border-radius: 0.5vw;
+  min-height: 3vh;
   min-width: auto;
   width: auto;
   color: black;
 }
 
 .card-btn>button:hover {
-  background-color: blue;
+  background-color: rgb(53, 53, 255);
   color: white;
 }
+
+.card-btn :nth-child(2):hover {
+  background-color: rgb(254, 65, 65);
+  color: white;
+}
+
 
 .update-create {
   margin: 30px;
 }
 
 .update-create input {
-  margin: 5px;
-  padding: 2px;
-  width: 300px;
-  height: 25px;
+  margin: 0.5vw;
+  padding: 0.2vw;
+  width: 30vw;
+  height: 2.5wh;
 }
 
 .update-create .artist-form {
@@ -90,7 +78,7 @@ nav {
 }
 
 .artist-form {
-  gap: 20px;
+  gap: 2vw;
 }
 
 .profilePage {
