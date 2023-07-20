@@ -31,7 +31,7 @@ function App() {
       .catch((err) => console.log(err))
   }, [])
 
-  console.log(artist, loginUser);
+ // console.log(artist, loginUser);
 
   return (
     <div className="App">

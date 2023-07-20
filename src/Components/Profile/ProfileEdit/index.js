@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 const ProfileEdit = ({ loginUser, setLoginUser }) => {
 
-    console.log('c', loginUser);
+    // console.log('c', loginUser);
 
     // const { editProfileId } = useParams();
     const navigate = useNavigate();
@@ -50,8 +50,8 @@ const ProfileEdit = ({ loginUser, setLoginUser }) => {
         // loginUser[findIndex] = updatedUser;
 
         setLoginUser({ id: loginUser.id, ...updatedUser });
-        console.log(loginUser);
-        console.log("check", loginUser.id);
+        // console.log(loginUser);
+        // console.log("check", loginUser.id);
         navigate(`/profile/${loginUser.id}`);
 
 
